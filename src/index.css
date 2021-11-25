@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+form{
+    width: 400px;
+    background-color: tomato;
+    border-radius: 5px;
+    height: 250px;
+    color: black;
+    display: grid;
+    padding: 5px;
+}
+label{
+    font-size: 17px;
+}
+.input{
+    padding: 10px 5px;
+    width:100%;
+}
+
+form div{
+    margin-top: 5px;
+}
+ul {
+    list-style: none;
+    
+}
+h1{
+    color: black;
+}
+.list{
+    background-color: yellow;
+    width: 400px;
+    height: 250px;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.all{
+    border-radius: 5px;
+    background-color: white;
+    height: 600px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+ul li{
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    padding: 5px;
+    color: black;
+    background-color: chocolate;
+    margin: 3px;
+}
+
+.hide-btn{
+    position: relative;
+    left: 80%;
+    top: 3%;
+    padding: 5px;
+    background-color: crimson;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.btn{
+    background-color: crimson;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.d-btn{
+
+    border: none;
+    padding: 3px;
+    border-radius: 3px;
 }

@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react"
+import AddTask from "./componenet/AddTask";
+import ShowList from "./componenet/ShowList";
+import Tasks from "./componenet/Tasks";
+
 
 function App() {
+  const [tasks, setTask] = useState([
+
+  
+  ])
+
+  const deleteTask =(id)=>{
+    setTask(tasks.filter((task)=> task.id !== id))
+  }
+const addInlist =(task)=>{
+  const id = Math.floor(Math.random()*100) +1;
+  const newTask = {id, ...task};
+  setTask([...tasks, newTask])
+}
+const [showHideList, setShowHideList]= useState(false)
+const ListVision= ()=>{
+  setShowHideList(!showHideList)
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="all">
+      <AddTask taskInlist={addInlist}   />
+      <div className="list">
+      <ShowList ListVision={ListVision} showHideList={showHideList} />
+   
+{ showHideList && <Tasks tasks={tasks} deleteTask={deleteTask} />}
+
+      </div>
     </div>
   );
 }
+
+
+
 
 export default App;
