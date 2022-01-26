@@ -1,1 +1,1 @@
-### Smooth Todo list with React
+### Todo list with React
